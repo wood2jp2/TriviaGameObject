@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="Assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="Assets/css/reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+  	<script type="text/javascript" src="Assets/javascript/triviaObject.js"></script>
+	<title>Document</title>
+</head>
+<body>
+	<h1>Trivia!</h1>
+	<p id="directions">Directions: You have 15 seconds per question to show off your knowledge of Seinfeld and Curb! How dry is your humor?</p>
+	<div id="clockStart">
+		<div id="timer">Time Left = <span id="timerDisplay"> </span></div>
+		<button id="start">Start</button>
+	</div>
+	
+	<div id="allOptions">
+		<div id="question"></div><br>
+		<div id="option1" class="option correct"></div><br>
+		<div id="option2" class="option incorrect"></div><br>
+		<div id="option3" class="option incorrect"></div><br>
+		<div id="option4" class="option incorrect"></div><br>
+	</div>
+		<div id="correctDiv" style="display:none">You are correct!</div>
+		<div id="incorrectDiv" style="display:none">
+			You are incorrect! <span id="userWrongChoice"> </span>
+			The correct answer is: <span id="correctAnswer"></span>
+	</div>
+	<div id="gameDone" style="display:none">
+		<div>Correct Answers: <span id="correctCount"></span></div>
+		<div>Incorrect Answers: <span id="incorrectCount"></span></div>	
+	</div>
+	<div id="resetGame" style="display:none">
+		<p>Would you like to play again? If so, click the reset button below!</p>
+		<button id="resetButton">Reset</button>
+	</div>
+
+</body>
+</html>
