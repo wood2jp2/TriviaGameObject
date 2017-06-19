@@ -10,13 +10,20 @@
 	<title>Document</title>
 </head>
 <body>
-	<h1>Trivia!</h1>
-	<p id="directions">Directions: You have 15 seconds per question to show off your knowledge of Seinfeld and Curb! How dry is your humor?</p>
+	<div class="jumbotron">
+	  <h1>Speed Seinfeld Trivia!</h1>
+	  <p>How dry is your humor?</p>
+	  <p><a id="start" class="btn btn-primary btn-lg" href="#" role="button">Start a game!</a></p>
+	</div>
+	<div class="col-lg-1"></div>
+	<div class="col-lg-5">
+	<p id="directions">Directions: You have 15 seconds per question to show off your knowledge of Seinfeld and Curb Your Enthusiasm! Beware: if time runs out it counts against you!Click the start button in the jumbotron to begin a new game. How dry is your humor?</p>
 	<div id="clockStart">
 		<div id="timer">Time Left = <span id="timerDisplay"> </span></div>
-		<button id="start">Start</button>
+		<!-- <button id="start">Start</button> -->
 	</div>
-	
+	</div>
+	<div class="col-lg-5">
 	<div id="allOptions">
 		<div id="question"></div><br>
 		<div id="option1" class="option correct"></div><br>
@@ -37,6 +44,7 @@
 		<p>Would you like to play again? If so, click the reset button below!</p>
 		<button id="resetButton">Reset</button>
 	</div>
-
+	</div>
+	<div class="col-lg-1"></div>
 </body>
 </html>

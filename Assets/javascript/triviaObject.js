@@ -66,7 +66,7 @@ $(window).ready(function() {
 					timerRunning = false;
 					incorrectGuesses++;
 					clearInterval(intervalId);
-					gameClock = 15;
+					gameClock = 90;
 					alert("You ran out of time!");
 					console.log("Incorrect guesses: " + incorrectGuesses);
 					i++;
@@ -113,8 +113,9 @@ $(window).ready(function() {
 					$('#correctDiv').css("display", "none");
 					$('#allOptions').css("display", "initial");
 				};
-				var timeoutInteger = setTimeout(timeoutId, 1000);
+				var timeoutInteger = setTimeout(timeoutId, 3000);
 				i++;
+				gameClock = 18;
 				triviaGame.questionArrayLoop();
 			});
 
@@ -129,15 +130,16 @@ $(window).ready(function() {
 					$('#incorrectDiv').css("display", "none");
 					$('#allOptions').css("display", "initial");
 				};
-				var timeoutInteger = setTimeout(timeoutId, 1000);
+				var timeoutInteger = setTimeout(timeoutId, 3000);
 				i++;
+				gameClock = 18;
 				triviaGame.questionArrayLoop();
 			});
 		},
 
 		restartGame: function() {
 			$('#resetGame').on('click', function() {
-				gameClock = 90;
+				gameClock = 15;
 				timerRunning = true;
 				userScore = 0;
 				incorrectGuesses = 0;
@@ -146,12 +148,14 @@ $(window).ready(function() {
 				$('#correctCount').css("display", "none");
 				$('#incorrectCount').css("display", "none");
 				$('#gameDone').css("display", "none");
+				$('#timer').css("display", "initial");
 				$('#question').css("display", "initial");
 				$('#option1').css("display", "initial");
 				$('#option2').css("display", "initial");
 				$('#option3').css("display", "initial");
 				$('#option4').css("display", "initial");
-				triviaGame.questionArrayLoop();
+				// triviaGame.answerSelected();
+				// triviaGame.questionArrayLoop();
 			})
 		}
 	};
